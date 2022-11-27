@@ -9,24 +9,26 @@ function generateTarget(){
     return number;
 }
 
-console.log(generateTarget());
+// console.log(generateTarget());
 
-function compareGuesses(humanGuess, computerGuess, SecretNumber){
-    let humanGuessToSecret = Math.abs(humanGuess - SecretNumber);
-    let computerGuessToSecret = Math.abs(computerGuess - SecretNumber);
-    if (humanGuessToSecret < computerGuessToSecret) {
+function compareGuesses(humanGuess, computerGuess, secretNumber){
+    humanGuess = Math.abs(humanGuess - secretNumber);
+    // console.log(humanGuess);
+    computerGuess = Math.abs(computerGuess - secretNumber);
+    if (humanGuess < computerGuess) {
         console.log(`Human wins`);
         return true;
-    } else if (computerGuessToSecret < humanGuessToSecret){
+    } else if (computerGuess < humanGuess){
             console.log('Computer wins')
         return false;
-        } else if (humanGuessToSecret === computerGuessToSecret){
-        console.log(`Human wins`);
+        } else if (humanGuess === computerGuess){
+        console.log(`Human wins the tie`);
         return true;
     }
 
 
 }
 
-console.log(compareGuesses());
-console.log(generateTarget());
+console.log(compareGuesses(10, 6, 8));
+console.log(compareGuesses(4, 18, 29));
+console.log(compareGuesses(16, 40, 25));
