@@ -11,4 +11,22 @@ function generateTarget(){
 
 console.log(generateTarget());
 
+function compareGuesses(humanGuess, computerGuess, SecretNumber){
+    let humanGuessToSecret = Math.abs(humanGuess - SecretNumber);
+    let computerGuessToSecret = Math.abs(computerGuess - SecretNumber);
+    if (humanGuessToSecret < computerGuessToSecret) {
+        console.log(`Human wins`);
+        return true;
+    } else if (computerGuessToSecret < humanGuessToSecret){
+            console.log('Computer wins')
+        return false;
+        } else if (humanGuessToSecret === computerGuessToSecret){
+        console.log(`Human wins`);
+        return true;
+    }
 
+
+}
+
+console.log(compareGuesses());
+console.log(generateTarget());
