@@ -29,6 +29,14 @@ function compareGuesses(humanGuess, computerGuess, secretNumber){
 
 }
 
+function updateScore(winner){
+    if (winner === 'human') {
+    humanScore += 1;
+    } else if (winner === 'computer') {
+        computerScore += 1;
+    }
+}
+
 console.log(compareGuesses(10, 6, 8));
 console.log(compareGuesses(4, 18, 29));
 console.log(compareGuesses(16, 40, 25));
