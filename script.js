@@ -37,6 +37,10 @@ function updateScore(winner){
     }
 }
 
+function advanceRound(){
+    currentRoundNumber += 1;
+}
+
 console.log(compareGuesses(10, 6, 8));
 console.log(compareGuesses(4, 18, 29));
 console.log(compareGuesses(16, 40, 25));
